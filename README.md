@@ -1,6 +1,6 @@
 # Description
 
-Support minimal index.js/index.coffee files that require and export all their siblings using their filenames
+Write minimal node index.js/index.coffee files that require and export all their siblings by file basename
 
 # Installation
 ```
