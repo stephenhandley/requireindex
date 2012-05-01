@@ -11,14 +11,16 @@ npm install requireindex
 Check the test directory for example usage. The directory tree looks like: 
 
 ```
--lib/
-  -index.js
-  -Foo.js
-  -bar/
+lib/
+  index.js
+  Foo.js
+  bar/
     index.js
     f.js
     fing.js
-  -bam.js
+  bam.js
+  _private.js
+  
 ```
 
 The index.js files look like this:
@@ -38,7 +40,8 @@ is this:
 ```
 {
   bam: { 
-    m: [Function] 
+    m: [Function],
+    n: [Function]
   },
   bar: { 
     f: [Function],

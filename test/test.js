@@ -8,7 +8,8 @@ try {
     "yea": lib.bar.f,
     "definitely": lib.bar.fing,
     "yes": lib.Foo.l,
-    "yep": lib.Foo.ls
+    "yep": lib.Foo.ls,
+    "ack": lib.bam.n
   }
   
   var keys = Object.keys(expectations)
@@ -16,10 +17,12 @@ try {
     assert.equal(expectations[expectation](), expectation);
   })
   
-  console.log(keys.length + " tests passed.");
+  assert.equal('_private' in lib, false);
+  
+  console.log("All tests passed.");
   
 } catch (error) {
-  console.log("Test Failed:");
-  console.log("Expected: " + error.expected);
-  console.log("  Actual: " + error.actual); 
+  console.log("Test Failed.");
+  console.log("   Expected: " + error.expected);
+  console.log("     Actual: " + error.actual); 
 }
