@@ -8,7 +8,7 @@ npm install requireindex
 ```
 
 # Usage
-Assuming a structure like this
+Check the test directory for example usage. The directory tree looks like: 
 
 ```
 -lib/
@@ -21,19 +21,19 @@ Assuming a structure like this
   -bam.js
 ```
 
-and the index.js files that look like this
+The index.js files look like this:
 
 ```js
 module.exports = require('requireindex')(__dirname)
 ```
 
-the result of
+and the result of
 
 ```
 require('lib')
 ```
 
-is
+is this:
 
 ```
 {
