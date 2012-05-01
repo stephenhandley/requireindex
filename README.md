@@ -19,6 +19,7 @@ Assuming a structure like this
     f.js
     fing.js
   -bam.js
+```
 
 and the index.js files that look like this
 
@@ -27,6 +28,7 @@ module.exports = require('requireindex')(__dirname)
 ```
 
 the result of
+
 ```
 require('lib')
 ```
