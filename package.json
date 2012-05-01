@@ -1,0 +1,41 @@
+{
+  "name": "requireindex",
+  
+  "description": "Write minimal node index.js/index.coffee files that require and export all their siblings by file basename",
+  
+  "version": "0.0.1",
+  
+  "license" : "MIT",
+  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenhandley/requireindex.git"
+  },
+  
+  "main": "index.js",
+  
+  "keywords": [
+    "require", 
+    "index", 
+    "index.js"
+  ],
+  
+  "directories" : {
+    "lib" : ".",
+    "test" : "test"
+  },
+  
+  "bugs": { 
+    "url" : "http://github.com/stephenhandley/requireindex/issues",
+  },
+  
+  "engines" : {
+    "node" : ">=0.4.0"
+  },
+  
+  "author": {
+    "name": "Stephen Handley",
+    "email": "stephen.handley@gmail.com",
+    "url": "http://person.sh"
+  }
+}
