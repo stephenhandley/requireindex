@@ -4,7 +4,7 @@ var fs   = require('fs'),
 module.exports = function(dir, basenames) {
   var requires = {};
   
-  if (arguments.length == 1) {  
+  if (arguments.length === 1) {  
     fs.readdirSync(dir).forEach(function(filename) {
   
       if ((filename === 'index.js') || (filename[0] === '_')) { return; }
