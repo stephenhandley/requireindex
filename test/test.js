@@ -9,7 +9,9 @@ try {
     "definitely": lib.bar.fing,
     "yes": lib.Foo.l,
     "yep": lib.Foo.ls,
-    "ack": lib.bam.n
+    "ack": lib.bam.n,
+    "again": lib.bar.fed.again,
+    "somemore": lib.bar.fed.somemore
   }
   
   var keys = Object.keys(expectations)
@@ -17,7 +19,8 @@ try {
     assert.equal(expectations[expectation](), expectation);
   })
   
-  assert.equal('_private' in lib, false);
+  assert.equal(('_private' in lib), false);
+  assert.equal(('ignored' in lib.bar.fed), false);
   
   console.log("All tests passed.");
   
