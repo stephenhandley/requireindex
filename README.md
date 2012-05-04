@@ -2,13 +2,28 @@
 
 Write minimal node index.js/index.coffee files that require and export all their siblings by file basename
 
+# Latest Version
+
+0.1.1
+
 # Installation
 ```
 npm install requireindex
 ```
 
+or in package.json 
+
+```json
+{
+  ...
+  "dependencies": {
+    "requireindex": "~0.1.1"
+  }
+}
+```
+
 # Usage
-Check the test directory for example usage. The directory tree looks like: 
+Check the test directory for example usage. The [test directory tree](https://github.com/stephenhandley/requireindex/tree/master/test/lib) looks like:
 
 ```
 lib/
@@ -18,33 +33,50 @@ lib/
     index.js
     f.js
     fing.js
+    fed/
+      again.js
+      ignored.js
+      index.js
+      somemore.js
   bam.js
   _private.js
   
 ```
 
-The index.js files look like this:
+The index.js files in [test/lib/](https://github.com/stephenhandley/requireindex/tree/master/test/lib/index.js) and [test/lib/bar/](https://github.com/stephenhandley/requireindex/tree/master/test/lib/bar/index.js) contain:
 
 ```js
-module.exports = require('requireindex')(__dirname)
+module.exports = require('requireindex')(__dirname);
 ```
 
-and the result of
+and the index.js file in [test/lib/bar/fed/](https://github.com/stephenhandley/requireindex/tree/master/test/lib/bar/fed/index.js) contains:
 
-```
-require('lib')
+```js
+module.exports = require('../../../../')(__dirname, ['again', 'somemore']);
 ```
 
-is this:
+The optional second argument allows you to explicitly specify the required files using their basename. In this example [test/lib/bar/fed/ignored.js](https://github.com/stephenhandley/requireindex/tree/master/test/lib/bar/fed/ignored.js) is not included as a public module. The other way to make a module/file private without the need for explicitly naming all the other included files is to prefix the filename with an underscore, as demonstrated by [test/lib/_private.js](https://github.com/stephenhandley/requireindex/tree/master/test/lib/_private.js) which is not exported.
 
+So, with these index.js files, the result of
+
+```js
+require('lib');
 ```
-{
+
+is:
+
+```js
+{ 
   bam: { 
-    m: [Function],
-    n: [Function]
+    m: [Function], 
+    n: [Function] 
   },
   bar: { 
     f: [Function],
+    fed: { 
+      again: [Function], 
+      somemore: [Function] 
+    },
     fing: [Function] 
   },
   Foo: { 

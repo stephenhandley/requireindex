@@ -18,7 +18,7 @@ try {
   keys.forEach(function(expectation) {
     assert.equal(expectations[expectation](), expectation);
   })
-  
+    
   assert.equal(('_private' in lib), false);
   assert.equal(('ignored' in lib.bar.fed), false);
   

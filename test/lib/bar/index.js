@@ -1,1 +1,1 @@
-module.exports = require('../../../index')(__dirname)
+module.exports = require('../../../')(__dirname)
