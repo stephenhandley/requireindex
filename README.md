@@ -1,6 +1,6 @@
 # Description
 
-Write minimal node index.js/index.coffee files that require and export all their siblings by file basename
+Write minimal node index.js/index.coffee files that require and export siblings by file basename
 
 # Latest Version
 
