@@ -7,9 +7,7 @@ module.exports = function(dir, basenames) {
   if (arguments.length == 1) {  
     fs.readdirSync(dir).forEach(function(filename) {
   
-      if ((filename === 'index.js') || (filename[0] === '_')) { 
-        return; 
-      }
+      if ((filename === 'index.js') || (filename[0] === '_')) { return; }
     
       filename = path.basename(filename, path.extname(filename));
       var filepath = path.join(dir, filename);
