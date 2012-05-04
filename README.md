@@ -4,7 +4,7 @@ Write minimal node index.js/index.coffee files that require and export siblings 
 
 # Latest Version
 
-0.1.1
+0.1.2
 
 # Installation
 ```
@@ -17,7 +17,7 @@ or in package.json
 {
   ...
   "dependencies": {
-    "requireindex": "~0.1.1"
+    "requireindex": "~0.1.2"
   }
 }
 ```
