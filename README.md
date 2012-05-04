@@ -23,7 +23,7 @@ or in package.json
 ```
 
 # Usage
-Check the test directory for example usage. The [test directory tree](https://github.com/stephenhandley/requireindex/tree/master/test/lib) looks like:
+Check the [test directory](https://github.com/stephenhandley/requireindex/tree/master/test) for example usage. The [test/lib](https://github.com/stephenhandley/requireindex/tree/master/test/lib) looks like:
 
 ```
 lib/
