@@ -7,9 +7,7 @@ module.exports = function(dir, basenames) {
   if (arguments.length == 1) {  
     fs.readdirSync(dir).forEach(function(filename) {
   
-      if ((filename === 'index.js') ||
-          (filename === 'index.coffee') ||
-          (filename[0] === '_')) { 
+      if ((filename === 'index.js') || (filename[0] === '_')) { 
         return; 
       }
     
