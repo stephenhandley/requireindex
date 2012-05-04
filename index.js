@@ -21,7 +21,7 @@ module.exports = function(dir, basenames) {
   
   } else {
     basenames.forEach(function(basename) {
-      var filepath = path.join(dir, basename)
+      var filepath = path.join(dir, basename);
       requires[basename] = require(filepath);
     });
   }
