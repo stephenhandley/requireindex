@@ -52,7 +52,7 @@ module.exports = require('requireindex')(__dirname);
 and the index.js file in [test/lib/bar/fed/](https://github.com/stephenhandley/requireindex/tree/master/test/lib/bar/fed/index.js) contains:
 
 ```js
-module.exports = require('../../../../')(__dirname, ['again', 'somemore']);
+module.exports = require('requireindex')(__dirname, ['again', 'somemore']);
 ```
 
 The optional second argument allows you to explicitly specify the required files using their basename. In this example [test/lib/bar/fed/ignored.js](https://github.com/stephenhandley/requireindex/tree/master/test/lib/bar/fed/ignored.js) is not included as a public module. The other way to make a module/file private without the need for explicitly naming all the other included files is to prefix the filename with an underscore, as demonstrated by [test/lib/_private.js](https://github.com/stephenhandley/requireindex/tree/master/test/lib/_private.js) which is not exported.
