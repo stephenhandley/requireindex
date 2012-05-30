@@ -21,7 +21,9 @@ try {
     
   assert.equal(('_private' in lib), false);
   assert.equal(('ignored' in lib.bar.fed), false);
-  
+
+  assert.equal(Object.keys(lib)[0], 'bam');
+
   console.log("All tests passed.");
   
 } catch (error) {

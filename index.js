@@ -6,7 +6,10 @@
     var requires = {};
   
     if (arguments.length === 1) {  
-      fs.readdirSync(dir).forEach(function(filename) {
+      var files = fs.readdirSync(dir);
+      files.sort(function(a,b) { return a.toLowerCase() - b.toLowerCase() });
+      
+      files.forEach(function(filename) {
   
         if ((filename === 'index.js') || (filename[0] === '_')) { return; }
     
