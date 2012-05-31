@@ -7,8 +7,20 @@
   
     if (arguments.length === 1) {  
       var files = fs.readdirSync(dir);
-      files.sort(function(a,b) { return a.toLowerCase() - b.toLowerCase() });
       
+      files.sort(function(a,b) {
+        a = a.toLowerCase(); 
+        b = b.toLowerCase();
+        
+        if (a < b) {
+          return -1;
+        } else if (b < a) { 
+          return 1;
+        } else {
+          return 0; 
+        }
+      });
+            
       files.forEach(function(filename) {
   
         if ((filename === 'index.js') || (filename[0] === '_')) { return; }
