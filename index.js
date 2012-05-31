@@ -8,6 +8,7 @@
     if (arguments.length === 1) {  
       var files = fs.readdirSync(dir);
       
+      // sort files in lowercase alpha for linux
       files.sort(function(a,b) {
         a = a.toLowerCase(); 
         b = b.toLowerCase();
