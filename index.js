@@ -29,13 +29,13 @@
         filename = path.basename(filename, path.extname(filename));
         var filepath = path.join(dir, filename);
     
-        requires[filename] = require(filepath);
+        requires[filename] = require(path.resolve(filepath));
       });
   
     } else {
       basenames.forEach(function(basename) {
         var filepath = path.join(dir, basename);
-        requires[basename] = require(filepath);
+        requires[filename] = require(path.resolve(filepath));
       });
     }
   
