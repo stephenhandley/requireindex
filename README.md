@@ -4,7 +4,7 @@ Write minimal node index.js files that require and export siblings by file basen
 
 # Latest Version
 
-0.1.4
+0.1.8
 
 # Installation
 ```
@@ -17,7 +17,7 @@ or in package.json
 {
   ...
   "dependencies": {
-    "requireindex": "~0.1.4"
+    "requireindex": "~0.1.8"
   }
 }
 ```
