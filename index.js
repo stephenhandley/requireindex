@@ -25,8 +25,11 @@
       files.forEach(function(filename) {
   
         if ((filename === 'index.js') || (filename[0] === '_')) { return; }
+
+        var ext = path.extname(filename);
+        if (!(ext in require.extensions)) { return; }
     
-        filename = path.basename(filename, path.extname(filename));
+        filename = path.basename(filename, ext);
         var filepath = path.join(dir, filename);
     
         requires[filename] = require(path.resolve(filepath));
