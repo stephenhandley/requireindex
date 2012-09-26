@@ -1,35 +1,41 @@
-var assert = require('assert');
+var Assert = require('assert');
+var Asserts = require('asserts');
 
-var lib = require('./lib');
 
-try {
-  var expectations = {
-    "ok": lib.bam.m,
-    "yea": lib.bar.f,
-    "definitely": lib.bar.fing,
-    "yes": lib.Foo.l,
-    "yep": lib.Foo.ls,
-    "ack": lib.bam.n,
-    "again": lib.bar.fed.again,
-    "somemore": lib.bar.fed.somemore
+
+Asserts(function () {
+  var lib = require('./lib');
+  
+  return {
+    "requireindex should": {
+      "properly include files parallel to index.js and maintain structure": function () {
+        Asserts.allEqual([
+          [lib.bam.m,            [], "ok"],
+          [lib.bar.f,            [], "yea"],
+          [lib.bar.fing,         [], 'definitely'],
+          [lib.Foo.l,            [], 'yes'],
+          [lib.Foo.ls,           [], 'yep'],
+          [lib.bam.n,            [], 'ack'],
+          [lib.bar.fed.again,    [], 'again'],
+          [lib.bar.fed.somemore, [], 'somemore']
+        ]);
+      },
+      
+      "ignore _ prefixed files": function () {
+        Assert.equal(('_private' in lib), false);
+      },
+      
+      "not include files not mentioned when second array argument is used": function () {
+        Assert.equal(('ignored' in lib.bar.fed), false);
+      },
+      
+      "ignore non javascript files": function () {
+        Assert.equal(('not_javascript' in lib), false);
+      },
+      
+      "sort files by lowercase alpha of the filename": function () {
+        Assert.equal(Object.keys(lib)[0], 'bam');
+      }
+    }
   };
-  
-  var keys = Object.keys(expectations);
-  keys.forEach(function (expectation) {
-    assert.equal(expectations[expectation](), expectation);
-  });
-    
-  assert.equal(('_private' in lib), false);
-  assert.equal(('ignored' in lib.bar.fed), false);
-  assert.equal(('not_javascript' in lib), false);
-
-  assert.equal(Object.keys(lib)[0], 'bam');
-
-  console.log("All tests passed.");
-  
-} catch (error) {
-  console.log("Test Failed.");
-  console.log("   Expected: " + error.expected);
-  console.log("     Actual: " + error.actual); 
-  console.log(error);
-}
+});
