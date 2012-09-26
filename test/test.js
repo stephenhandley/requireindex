@@ -1,8 +1,6 @@
 var Assert = require('assert');
 var Asserts = require('asserts');
 
-
-
 Asserts(function () {
   var lib = require('./lib');
   
