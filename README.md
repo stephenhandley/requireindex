@@ -4,20 +4,20 @@ Write minimal node index.js files that require and export siblings by file basen
 
 # Latest Version
 
-1.0.0
+1.0.1
 
 # Installation
 ```
 npm install requireindex
 ```
 
-or in package.json 
+or in package.json
 
 ```json
 {
   ...
   "dependencies": {
-    "requireindex": "~1.0.0"
+    "requireindex": "1.0.x"
   }
 }
 ```
@@ -40,7 +40,7 @@ lib/
       somemore.js
   bam.js
   _private.js
-  
+
 ```
 
 The index.js files in [test/lib/](https://github.com/stephenhandley/requireindex/tree/master/test/lib/index.js) and [test/lib/bar/](https://github.com/stephenhandley/requireindex/tree/master/test/lib/bar/index.js) contain:
@@ -66,23 +66,23 @@ require('lib');
 is:
 
 ```js
-{ 
-  bam: { 
-    m: [Function], 
-    n: [Function] 
+{
+  bam: {
+    m: [Function],
+    n: [Function]
   },
-  bar: { 
+  bar: {
     f: [Function],
-    fed: { 
-      again: [Function], 
-      somemore: [Function] 
+    fed: {
+      again: [Function],
+      somemore: [Function]
     },
-    fing: [Function] 
+    fing: [Function]
   },
-  Foo: { 
-    l: [Function], 
-    ls: [Function] 
-  } 
+  Foo: {
+    l: [Function],
+    ls: [Function]
+  }
 }
 ```
 
