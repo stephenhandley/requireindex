@@ -35,9 +35,9 @@ Asserts(function () {
         Assert.equal(Object.keys(lib)[0], 'bam');
       },
       
-      "ignore dot directories": function () {
+      "ignore dot files": function () {
         Assert.equal(('.also_private' in lib), false);
-      }
+      },
     }
   };
 });
