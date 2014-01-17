@@ -34,6 +34,10 @@ Asserts(function () {
       "sort files by lowercase alpha of the filename": function () {
         Assert.equal(Object.keys(lib)[0], 'bam');
       },
+      
+      "ignore dot directories": function () {
+        Assert.equal(('.also_private' in lib), false);
+      }
     }
   };
 });
