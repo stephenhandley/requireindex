@@ -41,7 +41,7 @@ module.exports = function (dir, basenames) {
       var ext      = Path.extname(filename);
       var stats    = FS.statSync(filepath);
       
-      if (stats.isDirectory() && filename[0] === '.') {
+      if (stats.isDirectory() && (filename[0] === '.')) {
         return;
       }
 
