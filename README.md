@@ -1,6 +1,6 @@
 # Description
 
-Write minimal node index.js files that require and export siblings by file basename
+Write minimal node index.js files that require and export brothers and sisters by file basename
 
 # Latest Version
 
