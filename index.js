@@ -42,7 +42,7 @@ module.exports = function (dir, basenames) {
       var stats    = FS.statSync(filepath);
       
       // don't require non-javascript files (.txt .md etc.)
-      if (stats.isFile() && !(ext in require.extensions)) { 
+      if (stats.isFile() && !(['.js', '.node', '.json'].includes(ext))) {
         return; 
       }
 
