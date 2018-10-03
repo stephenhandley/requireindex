@@ -1,5 +1,4 @@
-[(https://secure.travis-ci.org/stephenhandley/requireindex.png)](http://travis-ci.org/stephenhandley/requireindex)
-
+[![build status](https://secure.travis-ci.org/stephenhandley/requireindex.png)](http://travis-ci.org/stephenhandley/requireindex)
 # Description
 
 Write minimal node index.js files that require and export siblings by file basename
@@ -87,5 +86,3 @@ is:
   }
 }
 ```
-
-#Build status
