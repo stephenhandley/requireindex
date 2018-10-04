@@ -86,5 +86,5 @@ is:
 }
 ```
 
-#Build status
+# Build status
 [![build status](https://secure.travis-ci.org/stephenhandley/requireindex.png)](http://travis-ci.org/stephenhandley/requireindex)
