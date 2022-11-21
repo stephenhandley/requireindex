@@ -87,4 +87,4 @@ is:
 ```
 
 # Build status
-[![build status](https://secure.travis-ci.org/stephenhandley/requireindex.png)](http://travis-ci.org/stephenhandley/requireindex)
+[![CI](https://github.com/stephenhandley/requireindex/workflows/ci/badge.svg)](https://github.com/stephenhandley/requireindex/actions/workflows/ci.yml)
