@@ -42,9 +42,6 @@ jobs:
       - name: Install
         run: |
           npm install --ignore-scripts
-      - name: Check licenses
-        run: |
-          npm run license-checker
       - name: Run tests
         run: |
-          npm run test:ci
+          npm run test
