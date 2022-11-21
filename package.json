@@ -25,9 +25,6 @@
   "engines": {
     "node": ">=0.10.5"
   },
-  "devDependencies": {
-    "asserts": "4.0.x"
-  },
   "author": "Stephen Handley <stephen.handley@gmail.com> (http://person.sh)",
   "homepage": "https://github.com/stephenhandley/requireindex"
 }
